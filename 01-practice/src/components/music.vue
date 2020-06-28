@@ -46,9 +46,9 @@
     <div class="layui-row">
       <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 layui-col-bg12">
         <i class="layui-icon layui-icon-left"  @click="last"></i>
-        <audio class="audio" songId="idx" style="width: 100%;" ref="audio" :src="musicUrl" controls autoplay
-               loop></audio>
         <i class="layui-icon layui-icon-right" @click="next"></i>
+        <audio class="audio" songId="idx" style="width: 100%;" ref="audio" :src="musicUrl" controls autoplay loop>
+        </audio>
 
         <ul class="playlist">
           <li v-for="(item,index) in playList " @click="playMusicList(item.id,index)">{{index}} {{item.name}}</li>
@@ -145,6 +145,11 @@
   .layui-icon layui-icon-left {
     display: block;
     float: left;
+  }
+
+  .audio{
+    display: flex;
+    width: 50%;
   }
 
   .musicPic {
