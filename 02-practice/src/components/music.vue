@@ -85,27 +85,28 @@
       move() {
         let intv = parseInt(this.duration / 100);
 
-        var ok = document.getElementsByClassName("modal-content")[0].getElementsByClassName("modal-footer ui-draggable-handle")[0].getElementsByClassName("btn btn-sm btn-default")[0]
-        if(ok==true)
-          ok.click()
       }
     },
-  created()
-  {
-    setTimeout(() => {
-      console.log('music loading...')
-      this.init()
-    }, 2000)
-    console.log(this.audio.duration)
-    // this.duration = this.audio.duration
-  }
+    created() {
+      setTimeout(() => {
+        console.log('music loading...')
+        this.init()
+      }, 2000)
+      console.log(this.audio.duration)
+      // this.duration = this.audio.duration
+    },
+    watch: {
+      percentage(newv,oldv){
+        console.log(newv,oldv)
+      }
+    }
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-  .progress{
+  .progress {
     width: 100%;
   }
 

@@ -7,7 +7,7 @@
 
 <script>
 // @ is an alias to /src
-// import Music from '@/components/music.vue'
+// import Music from '@/components/Music.vue'
 
 export default {
   name: 'Home',
