@@ -2,12 +2,15 @@
   <div class="tab-bar">
     <div class="search" v-show="inputSearch">
       <form action="#" method="get" class="search-all">
-        <input type="text">
+        <div class="search-input">
+          <el-input  placeholder="搜你想搜" v-model="keywords" style="height: 60px" clearable></el-input>
+        </div>
       </form>
       <a href="#"></a>
     </div>
     <div class="menu">
       <el-menu class="menu" mode="horizontal">
+        <el-avatar src="https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png">user</el-avatar>
         <el-menu-item v-for="(item,index) in menuItems" @click="to(item.url)">{{item.title}}</el-menu-item>
         <el-menu-item class="el-icon-search" @click="showInput"></el-menu-item>
         <el-menu-item class="el-icon-plus" v-show="tabmore" @click="changeTabMore"></el-menu-item>
@@ -23,22 +26,26 @@
   export default {
     data() {
       return {
+        keywords: '',
         inputSearch: false,
         tabmore: true,
         activeIndex: '1',
-        menuItems: [{title:"博客",url:"/blog"},{title:"视频",url:"/video"}, {title:"音乐",url:"/music"}, {title:"作品展示",url:"/works"}, {title:"关于我",url:"/about"}]
+        menuItems: [{title: "首页", url: "/home"}, {title: "博客", url: "/blog"}, {
+            title: "视频",
+          url: "/video"
+        }, {title: "音乐", url: "/music"}, {title: "作品展示", url: "/works"}, {title: "关于我", url: "/about"}]
       };
     },
 
     methods: {
-      to(url){
+      to(url) {
         console.log(url)
-        if(this.$route.path!=url)
+        if (this.$route.path != url)
           this.$router.push(url)
       },
       showInput() {
-        if(this.tabmore==true)
-          this.tabmore=!this.tabmore
+        if (this.tabmore == true)
+          this.tabmore = !this.tabmore
         this.inputSearch = !this.inputSearch
       },
       changeTabMore() {
@@ -66,7 +73,7 @@
     border-color: #a1c1e7;
   }
 
-  .menu{
+  .menu {
     color: #a1c1e7;
     display: inline-block;
   }
@@ -81,6 +88,7 @@
   }
 
   .search {
+    border: 0px;
     display: flex;
     position: absolute;
     align-items: center;
@@ -88,11 +96,20 @@
     z-index: 1;
   }
 
-  .search form input {
-    padding: 0px;
+  .search-input {
+    padding: 0;
     font-size: 30px;
-    width: 429px;
-    height: 55px;
+    width: 449px;
+    /*width: 100%;*/
+    /*height: 60px;*/
+    height: 60px;
+
+  }
+
+  /*scope的样式不能穿透到子组件 可以用 >>> 或者 /deep/ 解决*/
+  .search-input>>>input.el-input__inner{
+    height: 60px;
+    border-radius: 0;
   }
 
 </style>
