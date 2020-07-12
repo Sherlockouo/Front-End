@@ -61,6 +61,7 @@
   .video-player{
     width: 100%;
     display: flex;
+    margin-top: 60px;
     flex-direction: column;
   }
 

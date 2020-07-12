@@ -6,10 +6,10 @@
     <div id="side">
       <side-bar></side-bar>
     </div>
+    <router-view/>
     <div id="foot">
       <foot-bar></foot-bar>
     </div>
-    <router-view/>
   </div>
 </template>
 
@@ -52,6 +52,7 @@
   }
 
   #nav {
+    display: flex;
     width: 100%;
     padding: 10px 20px;
     position: fixed;
@@ -69,10 +70,9 @@
   }
 
   #foot {
+    display: flex;
     width: 100%;
-    background-color: #d99090;
     position: relative;
-    display: block;
     bottom: 0;
   }
 

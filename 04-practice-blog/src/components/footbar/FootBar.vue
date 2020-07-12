@@ -1,7 +1,13 @@
 <template>
   <div class="foot-bar">
+    <div class="copy-right">
+      <span>
+        Copyright © 2020 SherlockOuO.  All rights reserved.
+
+      </span>
+    </div>
     <div>
-      Copyright
+
     </div>
   </div>
 </template>
@@ -14,8 +20,13 @@
 
 <style scoped>
   .foot-bar{
+    width: 100%;
     border: 1px solid #8f8f8f;
-    display: flex;
+    position: relative;
+  }
+
+  .copy-right{
     justify-content: center;
+    /*background-color: #fff;*/
   }
 </style>

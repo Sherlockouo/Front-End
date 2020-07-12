@@ -159,6 +159,7 @@
 <style scoped>
   .works-exh {
     width: 100%;
+    margin-top: 60px;
   }
 
   .shot {

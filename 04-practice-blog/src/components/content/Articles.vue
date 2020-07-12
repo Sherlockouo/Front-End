@@ -151,6 +151,7 @@
 
 <style scoped>
   .shot {
+    margin-top: 60px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
     border: 4px solid #ffd04b;
     border-radius: 12px;
