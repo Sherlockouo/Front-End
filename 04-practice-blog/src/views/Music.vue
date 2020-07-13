@@ -12,14 +12,15 @@
 
 <script>
   import MusicPlayer from "components/content/MusicPlayer";
-  import {recommendMusic} from "../network/data";
+  import {getMusicUrl, recommendMusic} from "../network/data";
   import MusicHeader from "components/music/MusicHeader";
 
   export default {
     name: "Music",
     data() {
       return {
-        musicList: []
+        musicList: [],
+        curMusic: ""
       }
     },
     methods: {
@@ -28,6 +29,15 @@
           this.musicList = res.result
         })
       }
+      // ,
+      // playMusic(id) {
+      //   getMusicUrl(id).then(res => {
+      //     console.log(id)
+      //         console.log(res)
+      //         this.curMusic = res
+      //       }
+      //   )
+      // }
     },
     created() {
       this.getRecommendMusic()
@@ -47,8 +57,9 @@
 
   .music-player {
     width: 100%;
+    height: 100%;
     display: flex;
-    padding: 0 40px 0 40px;
+    /*padding: 0 40px 0 40px;*/
     margin-top: 20px;
     float: left;
   }

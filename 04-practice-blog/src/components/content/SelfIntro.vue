@@ -3,7 +3,7 @@
     <div class="summary">
       <div class="avatar">
         <a href="/">
-          <img src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.1.0/images/trhx.png" id="avatar-icon" alt="">
+          <img src="https://img.hacpai.com/file/2020/04/%E4%BA%9A%E7%B4%A2-5d4385af.png" id="avatar-icon" alt="">
         </a>
 
         <table>
@@ -49,6 +49,33 @@
         <h2>简介|Introduction</h2>
         <p v-for="item in intros">{{item}}</p>
       </div>
+
+      <div class="bottom">
+        <div class="title">
+          <h2>关注我</h2>
+        </div>
+        <div class="contact-me">
+          <a href="https://space.bilibili.com/85902173">
+            <img src="https://www.bilibili.com/favicon.ico"></img>
+          </a>
+          <a href="https://www.zhihu.com/people/wu-ding-feng-51-63">
+            <img src="https://static.zhihu.com/static/favicon.ico"></img>
+          </a>
+          <a href="https://github.com/Sherlockouo">
+            <img src="https://img.icons8.com/fluent/96/github.png"></img>
+          </a>
+<!--          <a href="">-->
+<!--            <img src="https://www.bilibili.com/favicon.ico"></img>-->
+<!--          </a>-->
+<!--          <a href="">-->
+<!--            <img src="https://www.bilibili.com/favicon.ico"></img>-->
+<!--          </a>-->
+<!--          <a href="">-->
+<!--            <img src="https://www.bilibili.com/favicon.ico"></img>-->
+<!--          </a>-->
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -58,34 +85,34 @@
     name: "SelfIntro",
     data() {
       return {
-        intros:[
-            "● 学历：成都某本科，软件工程专业大三学生；",
-            "● 现况：自学前端，准备复习；",
-            "● 目标：网络安全工程师，算法工程师；",
-            "● 兴趣：酷爱编程，摄影·旅拍爱好者；",
-            "● 其他：以梦为马，不负韶华；",
+        intros: [
+          "● 学历：成都某本科，软件工程专业大三学生；",
+          "● 现况：自学前端，准备复习；",
+          "● 目标：网络安全工程师，算法工程师；",
+          "● 兴趣：酷爱编程，摄影·旅拍爱好者；",
+          "● 其他：以梦为马，不负韶华；",
 
         ],
-        skills:[
+        skills: [
           {
-            describe:"HTML/CSS/JS",
-            progress:20
+            describe: "HTML/CSS/JS",
+            progress: 20
           },
           {
-            describe:"JAVA",
-            progress:50
+            describe: "JAVA",
+            progress: 50
           },
           {
-            describe:"C++",
-            progress:40
+            describe: "C++",
+            progress: 40
           },
           {
-            describe:"PR/AE",
-            progress:50
+            describe: "PR/AE",
+            progress: 50
           },
           {
-            describe:"算法",
-            progress:50
+            describe: "算法",
+            progress: 50
           }
         ],
         sth: {
@@ -103,16 +130,17 @@
 
   @keyframes roll {
     0% {
-      transform: rotate(0deg);
+      transform: rotate(360deg);
     }
     /*25%  {transform: rotate(90deg);}*/
     /*50%  {transform: rotate(180deg);}*/
     100% {
-      transform: rotate(360deg);
+      transform: rotate(0deg);
     }
   }
 
   #avatar-icon {
+    object-fit: fill;
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -138,29 +166,29 @@
     width: 75%;
   }
 
-  p{
+  p {
     padding-left: 20px;
     text-align: left;
   }
 
-  td{
+  td {
     padding: 5px 5px;
     border-radius: 12px;
     /*background-color: #68b88e;*/
-    background:linear-gradient(#e7c6c1, #dbc4c4);
+    background: linear-gradient(#e7c6c1, #dbc4c4);
   }
-  
-  .summary{
+
+  .summary {
     border-radius: 12px;
     background-color: #fff;
   }
 
-  .multi{
+  .multi {
     padding-top: 20px;
     border-radius: 12px;
   }
 
-  .left{
+  .left {
     border-radius: 12px;
     background-color: #e29f9f;
     width: 45%;
@@ -171,7 +199,7 @@
     /*padding: 0 0 8px 20px;*/
   }
 
-  .right{
+  .right {
     border-radius: 12px;
     background-color: #8dd6e2;
     width: 45%;
@@ -180,5 +208,35 @@
     /*margin: 0.5% 0 0 0.5%;*/
     /*padding: 0 0 8px 20px;*/
   }
-  
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0 0 0;
+    /*margin-top: 20px;*/
+  }
+
+  .title {
+    width: 100%;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-align: center;
+    background: #f3dfdf;
+  }
+
+  .contact-me {
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    width: 100%;
+    background: #f3dfdf;
+  }
+
+  .contact-me img {
+    border-radius: 50%;
+    padding: 0 10px 0 10px;
+    width: 50px;
+    height: 50px;
+  }
+
 </style>

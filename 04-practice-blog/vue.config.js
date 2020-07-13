@@ -5,7 +5,9 @@ module.exports ={
         'components':'@/components',
         'network':'@/network',
         'views':'@/views',
-        'assets':'@/assets'
+        'assets':'@/assets',
+        'pages':'@/pages',
+        'utils':'@/utils'
       },
       extensions:['.js','.css','.vue','.json','.jpg','.jpeg','.png','.gif']
     }
